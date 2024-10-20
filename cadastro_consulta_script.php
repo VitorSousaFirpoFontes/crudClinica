@@ -13,15 +13,16 @@
 include "conexao.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $nome = $_POST['nome'] ?? '';
     $data_nascimento = $_POST['data_nascimento'] ?? '';
-    $genero = $_POST['gender'] ?? '';
-    $estado_civil = $_POST['estado_civil'] ?? '';
-    $endereco = $_POST['endereco'] ?? '';
-    $telefone = $_POST['telefone'] ?? '';
+    $horario = $_POST['horario'] ?? '';
+    $especialidade = $_POST['estado_civil'] ?? ''; // Renomear para 'especialidade'
+    $nome_medico = $_POST['nome_medico'] ?? '';
+    $motivo_consulta = $_POST['motivoconsulta'] ?? '';
 
     // Prepara a consulta SQL para inserir os dados
-    $sql = "INSERT INTO Pacientes (nome, data_nascimento, genero, estado_civil, endereco, telefone) VALUES (?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO consultas (data_nascimento, horario, especialidade, nome_medico, motivo_consulta) 
+            VALUES (?, ?, ?, ?, ?)";
+
     
     // Usa prepared statement para evitar SQL injection
     $stmt = $conn->prepare($sql);
@@ -31,11 +32,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Usa bind_param para associar os parâmetros
-    $stmt->bind_param("ssssss", $nome, $data_nascimento, $genero, $estado_civil, $endereco, $telefone);
+    $stmt->bind_param("sssss", $data_nascimento, $horario, $especialidade, $nome_medico, $motivo_consulta);
 
     // Executa a consulta e verifica o resultado
     if ($stmt->execute()) {
-        echo "<div class='alert alert-success'>$nome cadastrado com sucesso!</div>";
+        echo "<div class='alert alert-success'>Consulta agendada com sucesso!</div>";
     } else {
         echo "<div class='alert alert-danger'>Erro ao cadastrar: " . $stmt->error . "</div>";
     }

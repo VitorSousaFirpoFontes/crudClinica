@@ -1,0 +1,100 @@
+h1 {
+    text-align: center;
+    color: #000000; /* Texto preto para contraste com o fundo branco */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+}
+
+body {
+    background-color: #ffffff; /* Fundo branco */
+    background-image: url('medicina-na-postura-plana-de-fundo-azul_23-2149341573.avif');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Para ocupar toda a altura da tela */
+    margin: 0; /* Remove margens padrão */
+}
+
+label {
+    color: #000000; /* Texto preto para as labels */
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form-centralizado {
+    display: flex;
+    flex-direction: column; 
+    width: 300px; 
+    margin: 0 auto;
+}
+
+.meuinput {
+    border: 1px solid #000000; /* Bordas pretas para contraste */
+    width: 100%; /* Mantém 100% da largura do container */
+    max-width: 100%; /* Garante que não exceda a largura do container */
+    padding: 8px; /* Espaçamento interno */
+    margin-bottom: 10px; /* Espaçamento entre os inputs */
+    border-radius: 4px; /* Bordas arredondadas para os inputs */
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semitransparente para inputs */
+}
+
+p {
+    color: #000000; /* Texto preto para parágrafos */
+    font-family: 'Montserrat', sans-serif;
+}
+
+td {
+    color: #000000; /* Texto preto para células da tabela */
+    border: 1px solid #000000; /* Bordas pretas para tabela */
+    font-weight: bold; 
+}
+
+th {
+    color: #000000; /* Texto preto para cabeçalhos da tabela */
+    border: 1px solid #000000; /* Bordas pretas para tabela */
+    font-weight: bold; 
+}
+
+.div_img {
+    text-align: center;
+}
+
+section {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px; /* Adicione um padding ao redor do conteúdo */
+    border-radius: 8px; /* Bordas arredondadas */
+    background-color: #00f7ff; /* Fundo branco semitransparente */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+}
+
+.btn-pesquisar {
+    margin-top: 10px; 
+    background-color: #007bff; /* Azul mais forte para o botão */
+    color: white; /* Texto branco para contraste */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-pesquisar:hover {
+    background-color: #0056b3; /* Azul mais escuro no hover */
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group input {
+    margin-right: 5px;
+}
+
+.checkbox-group label {
+    margin-right: 15px;
+}

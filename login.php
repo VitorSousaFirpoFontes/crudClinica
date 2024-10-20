@@ -14,7 +14,7 @@ if (isset($_POST['username']) || isset($_POST['password'])) {
         $email = $conn->real_escape_string($_POST['username']);
         $senha = $conn->real_escape_string($_POST['password']);
 
-        $sql_code = "SELECT * FROM usuarios WHERE username = '$email' AND password = '$senha'";
+        $sql_code = "SELECT * FROM Usuarios WHERE username = '$email' AND password = '$senha'";
         $sql_query = $conn->query($sql_code) or die("Falha na conexão: " . $conn->error);
 
         $quantidade = $sql_query->num_rows;
@@ -53,6 +53,7 @@ if (isset($_POST['username']) || isset($_POST['password'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" />
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <title>Login</title>
 </head>
@@ -93,7 +94,7 @@ if (isset($_POST['username']) || isset($_POST['password'])) {
 
           
                 <div class="text-center">
-                    <p>Not a member? <a href="#">Register</a></p>
+                    <p>Not a member? <a href="registroUsuario.php">Register</a></p>
                     <p>or sign up with:</p>
 
                     <button type="button" class="btn btn-link btn-floating mx-1">

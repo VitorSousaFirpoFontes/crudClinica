@@ -11,31 +11,13 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 </head>
 <body>
-    <section>
-        <h1>Cadastro de Medicamentos</h1>
-        <br> 
-        <form action="cadastro_script.php" method="POST" class="form-centralizado">
-            <label for="nome">Nome do medicamento:</label>
-            <input class="meuinput" type="text" id="nome" name="nome" required>
-
-            <label for="preco">Preço unitário:</label>
-            <input class="meuinput" type="number" id="preco" name="preco" required>
-
-            <label for="quantidade">Quantidade disponível:</label>
-            <input class="meuinput" type="number" step="0.01" id="quantidade" name="quantidade" required>
-
-            <label for="categoria">Categoria do remédio:</label>
-            <input class="meuinput" type="text" id="categoria" name="categoria" required>
-
-            <label for="validade">Data de validade:</label>
-            <input class="meuinput" type="date" id="validade" name="validade" required>
-
-            <input type="submit" value="Cadastrar medicamento" class="btn-pesquisar">
-        </form>
-        <form action="pesquisar.php" method="GET" class="form-centralizado">
-            <input type="submit" value="Pesquisar medicamento" class="btn-pesquisar" />
-        </form>
+    <section class="text-center">
+        <h1>Seja bem-vindo!</h1>
+        <br><br>
+        
+        <a href="agendarConsulta.php" class="btn btn-primary">Agendar uma consulta</a><br><br>
+        <a href="servicos.php" class="btn btn-primary">Nossos serviços</a><br><br>
+        <a href="areaPaciente.php" class="btn btn-primary">Área do paciente</a>
     </section>
-
 </body>
 </html>
